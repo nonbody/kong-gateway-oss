@@ -18,8 +18,8 @@ services:
       - "8443:8443"
       - "8001:8001"
       - "8444:8444"
-#    volumes:
-#      - ./kong-log-err:/dev
+    volumes:
+      - ./kong-log:/usr/local/kong/logs
 
   konga:
     depends_on:

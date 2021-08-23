@@ -4,6 +4,7 @@ db-u:
 db-d:
 	docker compose -f db-compose.yaml down
 	rm -rf ./db
+	rm -rf ./kong-log
 
 db-m:
 	docker run --rm \
