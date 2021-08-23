@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  migrate-kong-db:
+    container_name: migrate-kong-db
+    image: kong:latest
+    command: ["kong", "migrations", "bootstrap"]
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-db
+      KONG_PG_USER: kong-user
+      KONG_PG_PASSWORD: kong-password
+
+networks:
+  default:
+    name: kong-network
