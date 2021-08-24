@@ -32,6 +32,12 @@ services:
     ports:
       - "1337:1337"
 
+  echo:
+    container_name: echo
+    image: echo:1.0.0
+    ports:
+      - "3000:3000"
+
 networks:
   default:
     name: kong-network
